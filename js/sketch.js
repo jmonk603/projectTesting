@@ -1,4 +1,4 @@
-var y1,x1,mySong,amplitude,bg1,bg2,opac,timer,highest;
+var y1,x1,mySong,amplitude,bg1,bg2,opac,timer,highest,bg3;
 
 function preload(){
     mySong = loadSound('assets/massiveAttackAngel.mp3');
@@ -45,6 +45,12 @@ function draw() {
     if (bbb > highest){
         highest = bbb;
         console.log(highest);
+    }
+    if (bbb > 100){
+        stroke(0,150,150);
+    }
+    if (bbb < 100){
+        stroke(bg2);
     }
     for (y = 200; y < (window.innerHeight - 86); y += 15){
         beginShape();
