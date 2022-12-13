@@ -1,4 +1,4 @@
-var y1,x1,mySong,amplitude,bg1,bg2,opac,timer,highest,bg3;
+var y1,x1,mySong,amplitude,bg1,bg2,opac,timer,highest,bg3,circleSize;
 
 function preload(){
     mySong = loadSound('assets/massiveAttackAngel.mp3');
@@ -9,6 +9,7 @@ function setup() {
     bg1 = 0;
     bg2 = 255;
     opac = 255;
+    circleSize = 10000;
 
     highest = 0;
 
@@ -28,12 +29,7 @@ function draw() {
     f = frameCount;
     background(bg1,opac);
 
-    textSize(65);
-    fill(bg2)
-    textAlign(CENTER, CENTER);
-    text('JOY DIVISION',(x1/2), 70);
-    textSize(37);
-    text('UNKNOWN PLEASURES',(x1/2), (window.innerHeight - 46));
+    
 
     fill(bg1);
     var level = amplitude.getLevel();
@@ -48,6 +44,7 @@ function draw() {
     }
     if (bbb > 100){
         stroke(0,150,150);
+        circleSize = 0;
     }
     if (bbb < 100){
         stroke(bg2);
@@ -68,6 +65,23 @@ function draw() {
     if (timer == 0){
         opac = 255;
     }
+
+    circleSize += 100;
+    strokeWeight(100);
+    stroke(bg1);
+    noFill();
+    circle(width/2,height/2,circleSize);
+    strokeWeight(1);
+    stroke(bg2);
+    circle(width/2,height/2,circleSize+100);
+    circle(width/2,height/2,circleSize-100);
+
+    textSize(65);
+    fill(bg2)
+    textAlign(CENTER, CENTER);
+    text('JOY DIVISION',(x1/2), 70);
+    textSize(37);
+    text('UNKNOWN PLEASURES',(x1/2), (window.innerHeight - 46));
 }
 
 function mouseClicked(){
