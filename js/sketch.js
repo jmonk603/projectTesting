@@ -1,9 +1,18 @@
-var playthis,y1,x1,mySong,amplitude,bg1,bg2,opac,timer,highest,bg3,circleSize,currentsong;
+var y1,x1,mySong,amplitude,bg1,bg2,opac,timer,highest,bg3,circleSize,currentsong,song1,song2,song3,song4,song5,song6,song7,song8,song9,song10;
 var menuopen = false;
 var playing = false;
 
 function preload(){
-    mySong = loadSound('assets/massiveAttackAngel.mp3');
+    song1 = loadSound('assets/disorder.mp3');
+    song2 = loadSound('assets/dayofthelords.mp3');
+    song3 = loadSound('assets/candidate.mp3');
+    song4 = loadSound('assets/insight.mp3');
+    song5 = loadSound('assets/newdawnfades.mp3');
+    song6 = loadSound('assets/sheslostcontrol.mp3');
+    song7 = loadSound('assets/shadowplay.mp3');
+    song8 = loadSound('assets/wilderness.mp3');
+    song9 = loadSound('assets/interzone.mp3');
+    song10 = loadSound('assets/iremembernothing.mp3');
     console.log('loaded');
 }
 
@@ -38,7 +47,7 @@ function draw() {
     fill(bg1);
     var level = amplitude.getLevel();
 
-    var bbb = map(level, 0, 1, 0, 350);
+    var bbb = map(level, 0, 1, 0, 550);
     
     console.log(window.innerHeight);
 
@@ -159,7 +168,7 @@ function keyPressed(){
     }
     if (key === '1'){
         if (menuopen === true){
-            playthis = mySong;
+            mySong = song1;
             mySong.play();
             playing = true;
             menuopen = false;
@@ -168,6 +177,7 @@ function keyPressed(){
     }
     if (key === '2'){
         if (menuopen === true){
+            mySong = song2;
             mySong.play();
             playing = true;
             menuopen = false;
@@ -176,6 +186,7 @@ function keyPressed(){
     }
     if (key === '3'){
         if (menuopen === true){
+            mySong = song3;
             mySong.play();
             playing = true;
             menuopen = false;
@@ -184,6 +195,7 @@ function keyPressed(){
     }
     if (key === '4'){
         if (menuopen === true){
+            mySong = song4;
             mySong.play();
             playing = true;
             menuopen = false;
@@ -192,6 +204,7 @@ function keyPressed(){
     }
     if (key === '5'){
         if (menuopen === true){
+            mySong = song5;
             mySong.play();
             playing = true;
             menuopen = false;
@@ -200,6 +213,7 @@ function keyPressed(){
     }
     if (key === '6'){
         if (menuopen === true){
+            mySong = song6;
             mySong.play();
             playing = true;
             menuopen = false;
@@ -208,6 +222,7 @@ function keyPressed(){
     }
     if (key === '7'){
         if (menuopen === true){
+            mySong = song7;
             mySong.play();
             playing = true;
             menuopen = false;
@@ -216,6 +231,7 @@ function keyPressed(){
     }
     if (key === '8'){
         if (menuopen === true){
+            mySong = song8;
             mySong.play();
             playing = true;
             menuopen = false;
@@ -224,6 +240,7 @@ function keyPressed(){
     }
     if (key === '9'){
         if (menuopen === true){
+            mySong = song9;
             mySong.play();
             playing = true;
             menuopen = false;
@@ -232,6 +249,7 @@ function keyPressed(){
     }
     if (key === '0'){
         if (menuopen === true){
+            mySong = song10;
             mySong.play();
             playing = true;
             menuopen = false;
